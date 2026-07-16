@@ -6,13 +6,13 @@ library(tools)
 library(bslib)
 
 # ----------------- 1. Mesh Files -----------------
-seg_folder <- "~/Library/CloudStorage/OneDrive-UniversitaetBern/Brain App/www/pial_DK_obj"
+seg_folder <- "/Users/jonathanvicente/Documents/GitHub/brain-app/www/pial_DK_obj"
 seg_files <- list.files(seg_folder, pattern = "\\.obj$", full.names = FALSE)
 seg_files <- paste0("pial_DK_obj/", seg_files)
 seg_regions <- file_path_sans_ext(basename(seg_files))
 seg_json <- toJSON(setNames(seg_files, seg_regions))
 
-hemi_folder <- "~/Library/CloudStorage/OneDrive-UniversitaetBern/Brain App/www/pial_Full_obj"
+hemi_folder <- "/Users/jonathanvicente/Documents/GitHub/brain-app/www/pial_Full_obj"
 hemi_files <- list.files(hemi_folder, pattern = "\\.obj$", full.names = FALSE)
 hemi_files <- paste0("pial_Full_obj/", hemi_files)
 hemi_names <- file_path_sans_ext(basename(hemi_files))
